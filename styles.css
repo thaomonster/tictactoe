@@ -1,23 +1,11 @@
-body {
-  background: linear-gradient(#c0c0c0,  #808080, #000000) no-repeat center fixed;
+body, html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 100%;
 }
 
-.wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.game-container {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  background-color: #ffffff;
-  width: 306px;
-  margin: 50px auto;
-}
-
+/* ~~~~~~~~ Game Section ~~~~~~~~ */
 .cell {
   width: 100px;
   height: 100px;
@@ -28,6 +16,36 @@ body {
   font-size: 60px;
 }
 
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  background-color: #ffffff;
+  width: 306px;
+  margin: 50px auto;
+}
+
 #game-section {
   background-color: #ffffff;
+  width: 44em;
+}
+
+/* ~~~~~~ Player Section ~~~~~~ */
+#harry-potter {
+background: linear-gradient(#EEBA30, #D3A625, #AE0001, #740001, #C0C0C0, #000000) no-repeat center fixed;
+}
+
+img {
+  width: 5em;
+  height: 5em;
+}
+
+#voldermont {
+  background: linear-gradient(#2A623D, #1A472A, #AAAAAA, #5D5D5D, #000000) no-repeat center fixed;;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8em;
 }
