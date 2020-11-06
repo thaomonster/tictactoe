@@ -19,18 +19,18 @@ body, html {
 .game-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  background-color: #ffffff;
-  width: 19em;
-  margin: 7.5em;
+  width: 1em;
+  margin: 5.5em;
 }
 
 #game-section {
   background-color: #ffffff;
-  width: 44em;
+  width: 40em;
 }
 
 p {
-  margin: 8em 0 0 20em;
+  margin: 2em 0 0 5.5em;
+  font-size: 3em;
 }
 
 /* ~~~~~~ Player Section ~~~~~~ */
@@ -45,6 +45,11 @@ img {
 
 #voldermont {
   background: linear-gradient(#2A623D, #1A472A, #AAAAAA, #5D5D5D, #000000) no-repeat center fixed;;
+}
+
+.win-count {
+display: flex;
+justify-content: center;
 }
 
 .wrapper {
