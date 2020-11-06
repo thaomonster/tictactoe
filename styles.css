@@ -3,30 +3,34 @@ body, html {
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
+  width: 100%;
 }
 
 /* ~~~~~~~~ Game Section ~~~~~~~~ */
 .cell {
-  width: 100px;
-  height: 100px;
-  box-shadow: 0 0 0 1px #333333;
-  border: 1px solid #333333;
+  width: 2.5em;
+  height: 2.5em;
+  box-shadow: 0 0 0 0.01em #333333;
+  border: 0.01em solid #333333;
   cursor: pointer;
-  line-height: 100px;
-  font-size: 60px;
+  font-size: 3.8em;
 }
 
 .game-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
   background-color: #ffffff;
-  width: 306px;
-  margin: 50px auto;
+  width: 19em;
+  margin: 7.5em;
 }
 
 #game-section {
   background-color: #ffffff;
   width: 44em;
+}
+
+p {
+  margin: 8em 0 0 20em;
 }
 
 /* ~~~~~~ Player Section ~~~~~~ */
@@ -47,5 +51,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8em;
+  padding: 3em;
+  font-size: 2em;
+  color: #ffffff;
 }
