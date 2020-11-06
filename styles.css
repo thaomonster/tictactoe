@@ -1,0 +1,62 @@
+body, html {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+/* ~~~~~~~~ Game Section ~~~~~~~~ */
+.cell {
+  width: 2.5em;
+  height: 2.5em;
+  box-shadow: 0 0 0 0.01em #333333;
+  border: 0.01em solid #333333;
+  cursor: pointer;
+  font-size: 3.8em;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 1em;
+  margin: 5.5em;
+}
+
+#game-section {
+  background-color: #ffffff;
+  width: 40em;
+}
+
+p {
+  margin: 2em 0 0 5.5em;
+  font-size: 3em;
+}
+
+/* ~~~~~~ Player Section ~~~~~~ */
+#harry-potter {
+background: linear-gradient(#EEBA30, #D3A625, #AE0001, #740001, #C0C0C0, #000000) no-repeat center fixed;
+}
+
+img {
+  width: 5em;
+  height: 5em;
+}
+
+#voldermont {
+  background: linear-gradient(#2A623D, #1A472A, #AAAAAA, #5D5D5D, #000000) no-repeat center fixed;;
+}
+
+.win-count {
+display: flex;
+justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3em;
+  font-size: 2em;
+  color: #ffffff;
+}
