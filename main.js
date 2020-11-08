@@ -1,10 +1,18 @@
 var gameBoard = document.querySelector('.game-container');
-var displayPlayer = document.querySelector('.header-section')
+var playerTurnHeader = document.querySelector('.player-turn-header');
+var winnerHeader = document.querySelector('.winner-header');
 var box = document.querySelectorAll('.box');
 
 var game = new Game();
 
-gameBoard.addEventListener('click', playerClick);
+gameBoard.addEventListener('click', gameStart);
+
+function gameStart(event) {
+  playerClick(event);
+  displayCurrentWinner();
+  game.switchPlayer(); 
+  displayCurrentPlayer();
+};
 
 function playerClick(event) {
   for (var i = 0; i < box.length; i++) {
@@ -14,19 +22,28 @@ function playerClick(event) {
         box[i].innerHTML = `<img src="${game.currentPlayer.token}" class="box-img">`;
     };
   };
-
-  
-
-  game.switchPlayer(); 
-  displayCurrentPlayer();
 };
 
 function displayCurrentPlayer() {
-  displayPlayer.innerHTML = `<p> It's <img src="${game.currentPlayer.token}" class="change-img"> turn!</p>`
+ playerTurnHeader.innerHTML = `<span class="player-turn-header"> It's <img src="${game.currentPlayer.token}" class="header-img"> turn!</span>`
 };
 
-function winCheck() {
-  if (game.board.length > 2) {
-    game.checkForWin(game.currentPlayer);
+function displayCurrentWinner() {
+  game.checkForWin(game.currentPlayer);
+
+  if (game.currentPlayer.gameWon === true) {
+    toggleHeader(playerTurnHeader, winnerHeader);
+    displayWinner();
   };
 };
+
+function displayWinner() {
+  winnerHeader.innerHTML = `<span class="player-turn-header"><img src="${game.currentPlayer.token}" class="header-img"> won!</span>`
+};
+
+function toggleHeader(headerOne, headerTwo) {
+  headerOne.classList.add('hidden')
+  headerTwo.classList.remove('hidden')
+};
+
+

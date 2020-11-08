@@ -31,37 +31,48 @@ class Game {
   };
 
   checkForWin(player) {
-    for (var i = 0; i < this.board.length; i++) {
-      if (this.board[0] === player.id && this.board[4] === player.id && this.board[8] === player.id) {
-        this.currentPlayer.wins++
-        return;
-      } else if (this.board[2] === player.id && this.board[4] === player.id && this.board[6] === player.id) {
-        this.currentPlayer.wins++
-        return;
-      } else if (this.board[0] === player.id && this.board[1] === player.id && this.board[2] === player.id) {
-        this.currentPlayer.wins++
-        return;
-      } else if (this.board[3] === player.id && this.board[4] === player.id && this.board[5] === player.id) {
-        this.currentPlayer.wins++
-        return;
-      } else if (this.board[6] === player.id && this.board[7] === player.id && this.board[8] === player.id) {
-        this.currentPlayer.wins++
-        return;
-      } else if (this.board[0] === player.id && this.board[3] === player.id && this.board[6] === player.id) {
-        this.currentPlayer.wins++
-        return;
-      } else if (this.board[2] === player.id && this.board[4] === player.id && this.board[6] === player.id) {
-        this.currentPlayer.wins++
-        return;
-      } else if (this.board[1] === player.id && this.board[4] === player.id && this.board[7] === player.id) {
-        this.currentPlayer.wins++
-        return;
-      } else if (this.board[2] === player.id && this.board[5] === player.id && this.board[8] === player.id) {
-        this.currentPlayer.wins++
-        return;
-      } else {
-        console.log('no win')
-      }
+    if (game.board.length > 4) {
+      for (var i = 0; i < this.board.length; i++) {
+        if (this.board[0] === player.id && this.board[4] === player.id && this.board[8] === player.id) {
+          this.currentPlayer.wins++
+          this.currentPlayer.gameWon = true;
+          return;
+        } else if (this.board[2] === player.id && this.board[4] === player.id && this.board[6] === player.id) {
+          this.currentPlayer.wins++
+          this.currentPlayer.gameWon = true;
+          return;
+        } else if (this.board[0] === player.id && this.board[1] === player.id && this.board[2] === player.id) {
+          this.currentPlayer.wins++
+          this.currentPlayer.gameWon = true;
+          return;
+        } else if (this.board[3] === player.id && this.board[4] === player.id && this.board[5] === player.id) {
+          this.currentPlayer.wins++
+          this.currentPlayer.gameWon = true;
+          return;
+        } else if (this.board[6] === player.id && this.board[7] === player.id && this.board[8] === player.id) {
+          this.currentPlayer.wins++
+          this.currentPlayer.gameWon = true;
+          return;
+        } else if (this.board[0] === player.id && this.board[3] === player.id && this.board[6] === player.id) {
+          this.currentPlayer.wins++
+          this.currentPlayer.gameWon = true;
+          return;
+        } else if (this.board[2] === player.id && this.board[4] === player.id && this.board[6] === player.id) {
+          this.currentPlayer.wins++
+          this.currentPlayer.gameWon = true;
+          return;
+        } else if (this.board[1] === player.id && this.board[4] === player.id && this.board[7] === player.id) {
+          this.currentPlayer.wins++
+          this.currentPlayer.gameWon = true;
+          return;
+        } else if (this.board[2] === player.id && this.board[5] === player.id && this.board[8] === player.id) {
+          this.currentPlayer.wins++
+          this.currentPlayer.gameWon = true;
+          return;
+        } else {
+          console.log('no win')
+        };
+      };
     };
     
 

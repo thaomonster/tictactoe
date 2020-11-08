@@ -7,6 +7,10 @@ body, html {
   width: 100%;
 }
 
+.hidden {
+  display: none!important;
+}
+
 img {
   width: 5em;
   height: 5em;
@@ -28,19 +32,20 @@ img {
   height: 2em;
 }
 
-.change-img {
-  height: 1.2em;
-  width: 1.2em;
-}
-
 .game-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
 }
 
+.header-img {
+  height: 1.2em;
+  width: 1.2em;
+}
+
 .header-section {
   display: flex;
   justify-content: center;
+  margin: 1em 0;
   background-color: #000000;
   color: #ffffff;
   font-size: 2.5em;
