@@ -28,21 +28,22 @@ img {
   height: 2em;
 }
 
+.change-img {
+  height: 1.2em;
+  width: 1.2em;
+}
+
 .game-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  margin: 5.5em;
 }
 
-.game-section {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-p {
+.header-section {
   display: flex;
   justify-content: center;
-  font-size: 1.5em;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 2.5em;
 }
 
 /* ~~~~~~ Player Section ~~~~~~ */

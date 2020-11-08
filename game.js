@@ -21,8 +21,8 @@ class Game {
       this.currentPlayer = this.playerOne;
     } else {
       this.currentPlayer = this.playerTwo;
-    }
-  }
+    };
+  };
 
   switchPlayer() {
     this.setCurrentPlayer();
@@ -50,8 +50,8 @@ class Game {
         this.currentPlayer.wins++
       } else if (this.board[2] && this.board[5] && this.board[8] === player.id) {
         this.currentPlayer.wins++
-      }
-    }
+      };
+    };
 
     // if (this.currentPlayer.marked.length > 2) {
     //   for (var i = 0; i < this.winCombos.length; i++) {
