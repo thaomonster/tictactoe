@@ -4,7 +4,7 @@ class Player {
     this.token = token;
     this.wins = 0;
     this.turn = turn;
-    this.marked = [];
+    // this.marked = [];
   };
 
   saveWinsToStorage() {

@@ -2,7 +2,7 @@ class Game {
   constructor() {
     this.playerOne = new Player('p1', './assets/harrypotter.jpg', true);
     this.playerTwo = new Player('p2', './assets/voldemort.png', false);
-    this.currentPlayer = null;
+    this.currentPlayer = this.playerOne;
     this.board = ['', '', '', '', '', '', '', '', ''];
     // this.winCombos = [
     //   [0,4,8], 
@@ -18,9 +18,9 @@ class Game {
 
   setCurrentPlayer() {
     if (this.playerOne.turn) {
-      this.currentPlayer = this.playerOne;
-    } else {
       this.currentPlayer = this.playerTwo;
+    } else {
+      this.currentPlayer = this.playerOne;
     };
   };
 
@@ -32,26 +32,38 @@ class Game {
 
   checkForWin(player) {
     for (var i = 0; i < this.board.length; i++) {
-      if (this.board[0] && this.board[4] && this.board[8] === player.id) {
+      if (this.board[0] === player.id && this.board[4] === player.id && this.board[8] === player.id) {
         this.currentPlayer.wins++
-      } else if (this.board[2] && this.board[4] && this.board[6] === player.id) {
+        return;
+      } else if (this.board[2] === player.id && this.board[4] === player.id && this.board[6] === player.id) {
         this.currentPlayer.wins++
-      } else if (this.board[0] && this.board[1] && this.board[2] === player.id) {
+        return;
+      } else if (this.board[0] === player.id && this.board[1] === player.id && this.board[2] === player.id) {
         this.currentPlayer.wins++
-      } else if (this.board[3] && this.board[4] && this.board[5] === player.id) {
+        return;
+      } else if (this.board[3] === player.id && this.board[4] === player.id && this.board[5] === player.id) {
         this.currentPlayer.wins++
-      } else if (this.board[6] && this.board[7] && this.board[8] === player.id) {
+        return;
+      } else if (this.board[6] === player.id && this.board[7] === player.id && this.board[8] === player.id) {
         this.currentPlayer.wins++
-      } else if (this.board[0] && this.board[3] && this.board[6] === player.id) {
+        return;
+      } else if (this.board[0] === player.id && this.board[3] === player.id && this.board[6] === player.id) {
         this.currentPlayer.wins++
-      } else if (this.board[2] && this.board[4] && this.board[6] === player.id) {
+        return;
+      } else if (this.board[2] === player.id && this.board[4] === player.id && this.board[6] === player.id) {
         this.currentPlayer.wins++
-      } else if (this.board[1] && this.board[4] && this.board[7] === player.id) {
+        return;
+      } else if (this.board[1] === player.id && this.board[4] === player.id && this.board[7] === player.id) {
         this.currentPlayer.wins++
-      } else if (this.board[2] && this.board[5] && this.board[8] === player.id) {
+        return;
+      } else if (this.board[2] === player.id && this.board[5] === player.id && this.board[8] === player.id) {
         this.currentPlayer.wins++
-      };
+        return;
+      } else {
+        console.log('no win')
+      }
     };
+    
 
     // if (this.currentPlayer.marked.length > 2) {
     //   for (var i = 0; i < this.winCombos.length; i++) {
