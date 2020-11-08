@@ -13,22 +13,6 @@ img {
 }
 
 /* ~~~~~~~~ Game Section ~~~~~~~~ */
-.game-container {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  margin: 5.5em;
-}
-
-.game-section {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-p {
-  margin: 2em 0 0 5.5em;
-  font-size: 3em;
-}
-
 .box {
   width: 2.5em;
   height: 2.5em;
@@ -42,6 +26,23 @@ p {
   margin: 0.24em;
   width: 2em;
   height: 2em;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 5.5em;
+}
+
+.game-section {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
 }
 
 /* ~~~~~~ Player Section ~~~~~~ */
@@ -61,7 +62,6 @@ justify-content: center;
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 2em;
   height: 100%;
   font-size: 2em;
