@@ -69,12 +69,11 @@ class Game {
           this.currentPlayer.wins++
           this.currentPlayer.gameWon = true;
           return;
-        } else {
-          console.log('no win')
         };
       };
     };
-    
+  };
+
 
     // if (this.currentPlayer.marked.length > 2) {
     //   for (var i = 0; i < this.winCombos.length; i++) {
@@ -116,5 +115,4 @@ class Game {
       //   };
       // };
     // }
-  };
 };

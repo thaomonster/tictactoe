@@ -1,7 +1,10 @@
 var gameBoard = document.querySelector('.game-container');
+var box = document.querySelectorAll('.box');
+
 var playerTurnHeader = document.querySelector('.player-turn-header');
 var winnerHeader = document.querySelector('.winner-header');
-var box = document.querySelectorAll('.box');
+var drawHeader = document.querySelector('.draw-header')
+
 
 var game = new Game();
 
@@ -34,7 +37,9 @@ function displayCurrentWinner() {
   if (game.currentPlayer.gameWon === true) {
     toggleHeader(playerTurnHeader, winnerHeader);
     displayWinner();
-  };
+  } else {
+    checkForDraw()
+  }
 };
 
 function displayWinner() {
@@ -46,4 +51,10 @@ function toggleHeader(headerOne, headerTwo) {
   headerTwo.classList.remove('hidden')
 };
 
-
+function checkForDraw() {
+  if (game.board.includes('')) {
+    return
+  } else {
+   toggleHeader(playerTurnHeader, drawHeader)
+  };
+};
