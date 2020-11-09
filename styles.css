@@ -20,7 +20,6 @@ img {
 .box {
   width: 2.5em;
   height: 2.5em;
-  box-shadow: 0 0 0 0.01em #C0C0C0;
   border: 0.01em solid #C0C0C0;
   cursor: pointer;
   font-size: 3.8em;
@@ -46,7 +45,6 @@ img {
   display: flex;
   justify-content: center;
   margin: 1em 0;
-  background-color: #000000;
   color: #ffffff;
   font-size: 2.5em;
 }
@@ -66,8 +64,6 @@ justify-content: center;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
   padding: 2em;
   height: 100%;
   font-size: 2em;
