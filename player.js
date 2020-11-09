@@ -9,10 +9,10 @@ class Player {
   };
 
   saveWinsToStorage() {
-
+    localStorage.setItem(`${this.id}-wins`, JSON.stringify(this.wins));
   };
 
   retrieveWinsFromStorage() {
-
+    JSON.parse(localStorage.getItem(`${this.id}-wins`))
   };
 };

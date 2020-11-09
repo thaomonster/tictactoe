@@ -8,27 +8,29 @@ var drawHeader = document.querySelector('.draw-header')
 
 var game = new Game();
 
-gameBoard.addEventListener('click', gameStart);
-
-function gameStart(event) {
-  playerClick(event);
-  displayCurrentWinner();
-  game.switchPlayer(); 
-  displayCurrentPlayer();
-};
+gameBoard.addEventListener('click', playerClick);
 
 function playerClick(event) {
   for (var i = 0; i < box.length; i++) {
     if (box[i].id === event.target.id) {
         game.board[i] = game.currentPlayer.id;
         // game.currentPlayer.marked.push(parseInt(box[i].id));
-        box[i].innerHTML = `<img src="${game.currentPlayer.token}" class="box-img">`;
+      toggleCurrentPlayer(i); 
     };
   };
 };
 
+function toggleCurrentPlayer(index) {
+  if (box[index].innerHTML === '') {
+    box[index].innerHTML = `<img src="${game.currentPlayer.token}" class="box-img">`
+    displayCurrentWinner();
+    game.switchPlayer(); 
+    displayCurrentPlayer();
+  };
+}
+
 function displayCurrentPlayer() {
- playerTurnHeader.innerHTML = `<span class="player-turn-header"> It's <img src="${game.currentPlayer.token}" class="header-img"> turn!</span>`
+  playerTurnHeader.innerHTML = `<span class="player-turn-header"> It's <img src="${game.currentPlayer.token}" class="header-img"> turn!</span>`
 };
 
 function displayCurrentWinner() {
@@ -37,9 +39,10 @@ function displayCurrentWinner() {
   if (game.currentPlayer.gameWon === true) {
     toggleHeader(playerTurnHeader, winnerHeader);
     displayWinner();
+    game.currentPlayer.saveWinsToStorage();
   } else {
     checkForDraw()
-  }
+  };
 };
 
 function displayWinner() {
