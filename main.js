@@ -1,12 +1,73 @@
-var gameBoard = document.querySelector('#game-section');
-var square = document.querySelectorAll('.square');
+var gameBoard = document.querySelector('.game-container');
+var box = document.querySelectorAll('.box');
 
+var playerTurnHeader = document.querySelector('.player-turn-header');
+var winnerHeader = document.querySelector('.winner-header');
+var drawHeader = document.querySelector('.draw-header')
+var winCount = document.querySelectorAll('.win-count')
+
+
+var game = new Game();
+
+window.onLoad = showWinCount();
 gameBoard.addEventListener('click', playerClick);
 
 function playerClick(event) {
-  for (var i = 0; i < square.length; i++) {
-    if (square[i].id === event.target.id) {
-      square[i].innerHTML = `<img src=./assets/harrypotter.jpg id="square-img">`
-    }
-  }
+  for (var i = 0; i < box.length; i++) {
+    if (box[i].id === event.target.id) {
+        game.board[i] = game.currentPlayer.id;
+        // game.currentPlayer.marked.push(parseInt(box[i].id));
+      toggleCurrentPlayer(i); 
+    };
+  };
+};
+
+function toggleCurrentPlayer(index) {
+  if (box[index].innerHTML === '') {
+    box[index].innerHTML = `<img src="${game.currentPlayer.token}" class="box-img">`
+    displayCurrentWinner();
+    showWinCount();
+    game.switchPlayer(); 
+    displayCurrentPlayer();
+  };
 }
+
+function displayCurrentPlayer() {
+  playerTurnHeader.innerHTML = `<span class="player-turn-header"> It's <img src="${game.currentPlayer.token}" class="header-img"> turn!</span>`
+};
+
+function displayCurrentWinner() {
+  game.checkForWin(game.currentPlayer);
+
+  if (game.currentPlayer.gameWon === true) {
+    toggleHeader(playerTurnHeader, winnerHeader);
+    displayWinner();
+    game.currentPlayer.saveWinsToStorage();
+  } else {
+    checkForDraw()
+  };
+};
+
+function displayWinner() {
+  winnerHeader.innerHTML = `<span class="player-turn-header"><img src="${game.currentPlayer.token}" class="header-img"> won!</span>`
+};
+
+function toggleHeader(headerOne, headerTwo) {
+  headerOne.classList.add('hidden')
+  headerTwo.classList.remove('hidden')
+};
+
+function checkForDraw() {
+  if (game.board.includes('')) {
+    return
+  } else {
+   toggleHeader(playerTurnHeader, drawHeader)
+  };
+};
+
+function showWinCount() {
+  game.playerOne.retrieveWinsFromStorage();
+  game.playerTwo.retrieveWinsFromStorage();
+  winCount[0].innerText = `${game.playerOne.wins} Wins`
+  winCount[1].innerText = `${game.playerTwo.wins} Wins`
+};  

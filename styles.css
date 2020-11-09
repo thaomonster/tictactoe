@@ -7,8 +7,17 @@ body, html {
   width: 100%;
 }
 
+.hidden {
+  display: none!important;
+}
+
+img {
+  width: 5em;
+  height: 5em;
+}
+
 /* ~~~~~~~~ Game Section ~~~~~~~~ */
-.square {
+.box {
   width: 2.5em;
   height: 2.5em;
   box-shadow: 0 0 0 0.01em #C0C0C0;
@@ -17,36 +26,38 @@ body, html {
   font-size: 3.8em;
 }
 
+.box-img{
+  margin: 0.24em;
+  width: 2em;
+  height: 2em;
+}
+
 .game-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  width: 1em;
-  margin: 5.5em;
 }
 
-#game-section {
+.header-img {
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.header-section {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
   background-color: #000000;
-  width: 40em;
   color: #ffffff;
-}
-
-p {
-  margin: 2em 0 0 5.5em;
-  font-size: 3em;
-}
-
-#square-img{
-  width: 2.5em;
-  height: 2.5em;
+  font-size: 2.5em;
 }
 
 /* ~~~~~~ Player Section ~~~~~~ */
 #harry-potter {
-background: linear-gradient(#EEBA30, #D3A625, #AE0001, #740001, #C0C0C0, #000000) no-repeat center fixed;
+background: linear-gradient(#EEBA30, #D3A625, #AE0001, #740001, #C0C0C0, #000000) no-repeat center;
 }
 
 #voldermont {
-  background: linear-gradient(#2A623D, #1A472A, #AAAAAA, #5D5D5D, #000000) no-repeat center fixed;;
+  background: linear-gradient(#2A623D, #1A472A, #AAAAAA, #5D5D5D, #000000) no-repeat center;
 }
 
 .win-count {
@@ -57,8 +68,8 @@ justify-content: center;
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 3em;
+  padding: 2em;
+  height: 100%;
   font-size: 2em;
   color: #ffffff;
 }
