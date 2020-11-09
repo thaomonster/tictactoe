@@ -8,7 +8,6 @@ var winCount = document.querySelectorAll('.win-count')
 
 var game = new Game();
 
-window.onLoad = showWinCount();
 gameBoard.addEventListener('click', playerClick);
 
 function playerClick(event) {
@@ -74,10 +73,7 @@ function showWinCount() {
 };  
 
 function endGame() {
-  for (var i = 0; i < box.length; i++) {
-    box[i].innerHTML = '';
-  }
-  location.reload();
+  location.reload(showWinCount());
 };
 
 function timeout() {
