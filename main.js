@@ -42,7 +42,7 @@ function displayCurrentWinner() {
     toggleHeader(playerTurnHeader, winnerHeader);
     displayWinner();
     game.currentPlayer.saveWinsToStorage();
-    gameBoard.disabled = true;
+    gameBoard.removeEventListener('click', playerClick);
     timeout();
   } else {
     checkForDraw()
@@ -82,6 +82,6 @@ function endGame() {
 }
 
 function timeout() {
-  window.setTimeout(endGame, 2000);
+  window.setTimeout(endGame, 5000);
   
 }
