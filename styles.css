@@ -1,5 +1,7 @@
 body, html {
-  background-color: #000000;
+  background: url(./assets/hpbackground.jpg) no-repeat fixed;
+  background-position: center center;
+  background-size: cover;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
