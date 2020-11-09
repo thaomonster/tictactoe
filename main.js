@@ -49,7 +49,7 @@ function displayCurrentWinner() {
 };
 
 function displayWinner() {
-  winnerHeader.innerHTML = `<span class="player-turn-header"><img src="${game.currentPlayer.token}" class="header-img"> won!</span>`
+  winnerHeader.innerHTML = `<span class="player-turn-header"><img src="${game.currentPlayer.token}" class="header-img"> Avada Kedavra!</span>`
 };
 
 function toggleHeader(headerOne, headerTwo) {

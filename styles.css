@@ -50,11 +50,11 @@ img {
 }
 
 /* ~~~~~~ Player Section ~~~~~~ */
-#harry-potter {
+.harry-potter {
 background: linear-gradient(#EEBA30, #D3A625, #AE0001, #740001, #C0C0C0, #000000) no-repeat center;
 }
 
-#voldermont {
+.voldermont {
   background: linear-gradient(#2A623D, #1A472A, #AAAAAA, #5D5D5D, #000000) no-repeat center;
 }
 
