@@ -79,9 +79,8 @@ function endGame() {
     box[i].innerHTML = '';
   }
   location.reload();
-}
+};
 
 function timeout() {
-  window.setTimeout(endGame, 5000);
-  
-}
+  window.setTimeout(endGame, 2000);
+};
