@@ -13,6 +13,7 @@ class Player {
   };
 
   retrieveWinsFromStorage() {
-    JSON.parse(localStorage.getItem(`${this.id}-wins`))
+    JSON.parse(localStorage.getItem(`${this.id}-wins`));
+    this.wins = JSON.parse(localStorage.getItem(`${this.id}-wins`)) || 0;
   };
 };

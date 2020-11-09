@@ -74,7 +74,6 @@ class Game {
     };
   };
 
-
     // if (this.currentPlayer.marked.length > 2) {
     //   for (var i = 0; i < this.winCombos.length; i++) {
     //     for (var j = 0; j < this.currentPlayer.marked.length; j++) {

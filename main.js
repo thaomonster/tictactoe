@@ -4,10 +4,12 @@ var box = document.querySelectorAll('.box');
 var playerTurnHeader = document.querySelector('.player-turn-header');
 var winnerHeader = document.querySelector('.winner-header');
 var drawHeader = document.querySelector('.draw-header')
+var winCount = document.querySelectorAll('.win-count')
 
 
 var game = new Game();
 
+window.onLoad = showWinCount();
 gameBoard.addEventListener('click', playerClick);
 
 function playerClick(event) {
@@ -24,6 +26,7 @@ function toggleCurrentPlayer(index) {
   if (box[index].innerHTML === '') {
     box[index].innerHTML = `<img src="${game.currentPlayer.token}" class="box-img">`
     displayCurrentWinner();
+    showWinCount();
     game.switchPlayer(); 
     displayCurrentPlayer();
   };
@@ -61,3 +64,10 @@ function checkForDraw() {
    toggleHeader(playerTurnHeader, drawHeader)
   };
 };
+
+function showWinCount() {
+  game.playerOne.retrieveWinsFromStorage();
+  game.playerTwo.retrieveWinsFromStorage();
+  winCount[0].innerText = `${game.playerOne.wins} Wins`
+  winCount[1].innerText = `${game.playerTwo.wins} Wins`
+};  
