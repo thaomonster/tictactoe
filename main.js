@@ -6,7 +6,6 @@ var winnerHeader = document.querySelector('.winner-header');
 var drawHeader = document.querySelector('.draw-header')
 var winCount = document.querySelectorAll('.win-count')
 
-
 var game = new Game();
 
 window.onLoad = showWinCount();
@@ -43,6 +42,8 @@ function displayCurrentWinner() {
     toggleHeader(playerTurnHeader, winnerHeader);
     displayWinner();
     game.currentPlayer.saveWinsToStorage();
+    gameBoard.removeEventListener('click', playerClick);
+    timeout();
   } else {
     checkForDraw()
   };
@@ -63,6 +64,7 @@ function checkForDraw() {
   } else {
    toggleHeader(playerTurnHeader, drawHeader)
   };
+  timeout();
 };
 
 function showWinCount() {
@@ -71,3 +73,14 @@ function showWinCount() {
   winCount[0].innerText = `${game.playerOne.wins} Wins`
   winCount[1].innerText = `${game.playerTwo.wins} Wins`
 };  
+
+function endGame() {
+  for (var i = 0; i < box.length; i++) {
+    box[i].innerHTML = '';
+  }
+  location.reload();
+};
+
+function timeout() {
+  window.setTimeout(endGame, 2000);
+};
