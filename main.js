@@ -15,7 +15,6 @@ function playerClick(event) {
   for (var i = 0; i < box.length; i++) {
     if (box[i].id === event.target.id) {
         game.board[i] = game.currentPlayer.id;
-        // game.currentPlayer.marked.push(parseInt(box[i].id));
       toggleCurrentPlayer(i); 
     };
   };
@@ -36,7 +35,7 @@ function displayCurrentPlayer() {
 };
 
 function displayCurrentWinner() {
-  game.checkForWin(game.currentPlayer);
+  game.checkForWin();
 
   if (game.currentPlayer.gameWon === true) {
     toggleHeader(playerTurnHeader, winnerHeader);

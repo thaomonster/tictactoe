@@ -5,7 +5,6 @@ class Player {
     this.wins = 0;
     this.gameWon = false;
     this.turn = turn;
-    // this.marked = [];
   };
 
   saveWinsToStorage() {
