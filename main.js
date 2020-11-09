@@ -41,8 +41,9 @@ function displayCurrentWinner() {
   if (game.currentPlayer.gameWon === true) {
     toggleHeader(playerTurnHeader, winnerHeader);
     displayWinner();
-    endGame();
     game.currentPlayer.saveWinsToStorage();
+    gameBoard.disabled = true;
+    timeout();
   } else {
     checkForDraw()
   };
@@ -63,6 +64,7 @@ function checkForDraw() {
   } else {
    toggleHeader(playerTurnHeader, drawHeader)
   };
+  timeout();
 };
 
 function showWinCount() {
@@ -76,4 +78,10 @@ function endGame() {
   for (var i = 0; i < box.length; i++) {
     box[i].innerHTML = '';
   }
+  location.reload();
+}
+
+function timeout() {
+  window.setTimeout(endGame, 2000);
+  
 }
