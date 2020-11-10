@@ -1,5 +1,5 @@
 body, html {
-  background: url(./assets/hogwarts.jpg) no-repeat fixed;
+  background: url(./assets/hogwartscastle.jpg) no-repeat fixed;
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -22,7 +22,7 @@ img {
 .box {
   width: 2.5em;
   height: 2.5em;
-  border: 0.01em solid #000000;
+  border: 0.01em solid #ffffff;
   cursor: pointer;
   font-size: 3.8em;
 }
@@ -48,12 +48,14 @@ img {
   justify-content: center;
   margin: 0.5em 0;
   font-size: 3em;
+  color: #ffffff;
 }
 
 /* ~~~~~~ Player Section ~~~~~~ */
 .win-count {
 display: flex;
 justify-content: center;
+color: #ffffff;
 }
 
 .wrapper {
