@@ -1,6 +1,7 @@
 var gameBoard = document.querySelector('.game-container');
 var box = document.querySelectorAll('.box');
 
+var header = document.querySelector('.header-section')
 var playerTurnHeader = document.querySelector('.player-turn-header');
 var winnerHeader = document.querySelector('.winner-header');
 var drawHeader = document.querySelector('.draw-header')
@@ -74,7 +75,16 @@ function showWinCount() {
 };  
 
 function endGame() {
-  location.reload();
+  // location.reload();
+  for (var i = 0; i < box.length; i++) {
+    box[i].innerHTML = '';
+  };
+  
+  game.board = ['', '', '', '', '', '', '', '', ''];
+
+  toggleHeader(winnerHeader, playerTurnHeader);
+  gameBoard.addEventListener('click', playerClick);
+  console.log(game.board)
 };
 
 function timeout() {

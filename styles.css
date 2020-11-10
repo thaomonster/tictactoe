@@ -1,5 +1,5 @@
 body, html {
-  background: url(./assets/hpbackground.jpg) no-repeat fixed;
+  background: url(./assets/hogwarts.jpg) no-repeat fixed;
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -22,7 +22,7 @@ img {
 .box {
   width: 2.5em;
   height: 2.5em;
-  border: 0.01em solid #C0C0C0;
+  border: 0.01em solid #000000;
   cursor: pointer;
   font-size: 3.8em;
 }
@@ -47,7 +47,6 @@ img {
   display: flex;
   justify-content: center;
   margin: 0.5em 0;
-  color: #ffffff;
   font-size: 3em;
 }
 
@@ -60,5 +59,4 @@ justify-content: center;
 .wrapper {
   padding: 2em;
   font-size: 2em;
-  color: #ffffff;
 }
