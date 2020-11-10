@@ -36,7 +36,7 @@ Each player is assigned to a Token. Player one's token is Harry Potter, while Pl
 There are seven different ways to win. You can win by having your token in a diagonal, filling up a row or column with three of your token. When there is a win the header will now show the winners token and Avada Kedavra (killing curse)!
 
 <p align = "center">
-<img src="https://media.giphy.com/media/gSJPHhlppkHhAAlcQx/giphy.gif">
+<img src="https://media.giphy.com/media/MqXNUMrweN20nEE44x/giphy.gif">
 </p>
       <details>
         <summary>**Under the Hood**</summary>
@@ -47,7 +47,7 @@ There are seven different ways to win. You can win by having your token in a dia
 If neither of the two players has a winning combo and the header will now change to say Expelliarmus which means that each player has diarmed each other and there is no winner.
 
 <p align = "center">
-<img src="https://media.giphy.com/media/xb3xhkLItiTdiAEYJZ/giphy.gif">
+<img src="https://media.giphy.com/media/Q6d9lfoeVnNYeNag0i/giphy.gif">
 </p>
 
   <details>
@@ -59,7 +59,7 @@ If neither of the two players has a winning combo and the header will now change
 Once a game has been won or if it comes to a draw the page refreshes and a new game can begin.
 
 <p align = "center">
-<img src="https://media.giphy.com/media/KhbwSujOuUb7XukEaO/giphy.gif">
+<img src="https://media.giphy.com/media/eqrPy6P2HK3GtaXswx/giphy.gif">
 </p>
 
   <details>
