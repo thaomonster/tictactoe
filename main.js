@@ -31,7 +31,7 @@ function toggleCurrentPlayer(index) {
 }
 
 function displayCurrentPlayer() {
-  playerTurnHeader.innerHTML = `<span class="player-turn-header"> It's <img src="${game.currentPlayer.token}" class="header-img"> turn!</span>`
+  playerTurnHeader.innerHTML = `<span class="player-turn-header"> It's <img src="${game.currentPlayer.token}"  alt="current player turn image" class="header-img"> turn!</span>`
 };
 
 function displayCurrentWinner() {
@@ -49,7 +49,7 @@ function displayCurrentWinner() {
 };
 
 function displayWinner() {
-  winnerHeader.innerHTML = `<span class="player-turn-header"><img src="${game.currentPlayer.token}" class="header-img"> Avada Kedavra!</span>`
+  winnerHeader.innerHTML = `<span class="player-turn-header"><img src="${game.currentPlayer.token}" alt="winner image" class="header-img"> Avada Kedavra!</span>`
 };
 
 function toggleHeader(headerOne, headerTwo) {
@@ -74,9 +74,6 @@ function showWinCount() {
 };  
 
 function endGame() {
-  for (var i = 0; i < box.length; i++) {
-    box[i].innerHTML = '';
-  }
   location.reload();
 };
 
