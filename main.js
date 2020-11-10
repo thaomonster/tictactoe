@@ -1,7 +1,6 @@
 var gameBoard = document.querySelector('.game-container');
 var box = document.querySelectorAll('.box');
 
-var header = document.querySelector('.header-section')
 var playerTurnHeader = document.querySelector('.player-turn-header');
 var winnerHeader = document.querySelector('.winner-header');
 var drawHeader = document.querySelector('.draw-header')
