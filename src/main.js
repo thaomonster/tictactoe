@@ -28,7 +28,7 @@ function toggleCurrentPlayer(index) {
     game.switchPlayer(); 
     displayCurrentPlayer();
   };
-}
+};
 
 function displayCurrentPlayer() {
   playerTurnHeader.innerHTML = `<span class="player-turn-header"> It's <img src="${game.currentPlayer.token}"  alt="current player turn image" class="header-img"> turn!</span>`

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="all.css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tic Tac Toe</title>
   </head>
@@ -13,11 +14,11 @@
       <div class="win-count"> 0 Wins</div>
     </section>
     <main>
-    <header class="header-section">
-      <span class="player-turn-header"> It's <img src="./assets/harrypotter.jpg" alt="harry potter" class="header-img"> turn!</span>
-      <span class="winner-header hidden"><img src="" class="header-img"> won!</span>
-      <span class="draw-header hidden"> Expelliarmus!</span>
-    </header>
+      <header class="header-section">
+        <span class="player-turn-header"> It's <img src="./assets/harrypotter.jpg" alt="harry potter" class="header-img"> turn!</span>
+        <span class="winner-header hidden"><img src="" class="header-img"> won!</span>
+        <span class="draw-header hidden"> Expelliarmus!</span>
+      </header>
       <section class="game-container">
         <div id="0" class="box"></div>
         <div id="1" class="box"></div>
@@ -36,7 +37,7 @@
       <div class="win-count">0 Wins</div>
     </section>
   </body>
-<script type="text/javascript" src="player.js"></script>
-<script type="text/javascript" src="game.js"></script>
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="./src/player.js"></script>
+<script type="text/javascript" src="./src/game.js"></script>
+<script type="text/javascript" src="./src/main.js"></script>
 </html>
