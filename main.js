@@ -75,16 +75,7 @@ function showWinCount() {
 };  
 
 function endGame() {
-  // location.reload();
-  for (var i = 0; i < box.length; i++) {
-    box[i].innerHTML = '';
-  };
-  
-  game.board = ['', '', '', '', '', '', '', '', ''];
-
-  toggleHeader(winnerHeader, playerTurnHeader);
-  gameBoard.addEventListener('click', playerClick);
-  console.log(game.board)
+  location.reload();
 };
 
 function timeout() {
